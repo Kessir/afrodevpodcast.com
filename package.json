@@ -1,0 +1,17 @@
+{
+  "name": "afrodevpodcast.com",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/plugin-google-analytics": "^0.1.0",
+    "gridsome": "^0.5.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "tailwindcss": "^1.0.0-beta.7"
+  }
+}
