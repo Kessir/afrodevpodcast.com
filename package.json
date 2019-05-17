@@ -11,6 +11,8 @@
     "gridsome": "^0.5.0"
   },
   "devDependencies": {
+    "@gridsome/transformer-remark": "^0.3.1",
+    "@gridsome/source-filesystem": "^0.4.1",
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "tailwindcss": "^1.0.0-beta.7"
   }
