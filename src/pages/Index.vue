@@ -4,17 +4,19 @@
       <img class="h-40" src="../../static/logo.png" alt>
 
       <h1 class="text-4xl mt-4">African Developers Podcast</h1>
-      <div class="flex mt-4">
-        <button class="px-2 py-1 border rounded-sm mr-3">Apple Podcast</button>
-        <button class="px-2 py-1 border rounded-sm mr-3">Google Podcast</button>
-        <button class="px-2 py-1 border rounded-sm mr-3">Spotify</button>
-        <button class="px-2 py-1 border rounded-sm">Overcast</button>
-      </div>
-      <p
-        class="my-2 text-lg mt-4 text-gray-500"
+         <p
+        class="text-base text-gray-400"
       >A podcast where African software developers share their stories. Hosted by  <a href="https://kessir.com">Kessir</a>.</p> 
+      
+      <div class="mt-5 text-gray-500">
+        <a href="https://itunes.apple.com/us/podcast/african-developers/id1447880665?mt=2&uo=4" class="px-2 py-1 border rounded-sm mr-3">Apple Podcast</a>
+        <a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy84NGNmNTc0L3BvZGNhc3QvcnNz" class="px-2 py-1 border rounded-sm mr-3">Google Podcast</a>
+        <a href="https://open.spotify.com/show/1H2fhp4TBINPQSFYxt6PnR" class="px-2 py-1 border rounded-sm mr-3">Spotify</a>
+        <a href="https://overcast.fm/itunes1447880665/african-developers" class="px-2 py-1 border rounded-sm">Overcast</a>
+      </div>
+   
 
-      <div class="mt-4">
+      <div class="mt-6">
         <h2 class="mb-2">Latest Episode</h2>
 <!-- <audio src="https://d3ctxlq1ktw2nl.cloudfront.net/staging/2019-4-7/14225037-44100-2-643e50209fbb7.m4a" controls class="w-full" ></audio> -->
 
