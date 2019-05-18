@@ -13,8 +13,8 @@
         </p>
 
         <div class="mt-3 text-gray-400">
-          <ul class="flex sm:justify-start justify-center justify-between flex-wrap">
-            <li class="mt-3 sm:mr-2" v-for="app in podcastApps" :key="app.name">
+          <ul class="flex sm:justify-start justify-center flex-wrap">
+            <li class="mt-3 sm:mr-2 mx-1" v-for="app in podcastApps" :key="app.name">
               <a
                 class="px-2 py-1 border border-gray-500 rounded-sm hover:text-gray-600 hover:border-gray-600"
                 target="_blank"
