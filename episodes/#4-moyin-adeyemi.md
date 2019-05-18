@@ -1,14 +1,15 @@
 ---
-title: "#4: Edem Kumodzi, Senior Consultant at Andela"
+title: "Episode 4: Moyinoluwa Adeyemi, Android Developer at Zola Electric, Lagos"
 audioUrl: "https://anchor.fm/africandev/embed/episodes/4-Moyinoluwa-Adeyemi--Android-Developer-at-Zola-Electric-e3e51h"
 date: 2019-03-11
+excerpt: "Moyin is a Nigerian Android developer currently working with Zola Electric (formerly Offgrid electric). She is also a GDG Lagos co-organizer.
+In this episode, Moyin tells us how she became an Android Developer. We also talk about what it takes to work remotely from Lagos and whether our educational systems adequately prepare us for modern software engineering."
 ---
 
-@edemkumodzi is a Ghanaian senior software engineer currently working at Andela as a senior consultant. Edem is also very involved in the Ghanaian tech ecosystem.
-In this episode, we talk about his trajectory, including his experience at Ringier Ghana, ThoughtWorks and now Andela. Edem also tells us why after 3 years working in Ecuador, he decided to come back to Ghana.
-Show notes:
+Moyin is a Nigerian Android developer currently working with Zola Electric (formerly Offgrid electric). She is also a GDG Lagos co-organizer.
+In this episode, Moyin tells us how she became an Android Developer. We also talk about what it takes to work remotely from Lagos and whether our educational systems adequately prepare us for modern software engineering.
 
-- https://edemkumodzi.com/why-i-became-a-software-engineer-f3b73dacaedf
-- Apache Subversion, a popular version control system before Git
-- Andela is hiring senior developers [link]()
-- Edem's plug: AfRadio
+Some articles and talks from Moyin:
+- No Internet? No Problem! Droidcon 2017
+- Moyinoluwa Adeyemi: Mobile Vision API on Android Dialogs
+- Battery Life: Mobile Development for ‘The Next Billion’

@@ -1,5 +1,5 @@
 <template>
-    <footer class="mt-8 mx-4 py-4 border-t border-gray-500 bottom text-gray-600 text-center">
+    <footer class="container m-auto mt-8 py-4 border-t border-gray-800 bottom text-gray-700 text-center text-sm">
       <div>&copy; African Developers Podcast</div>
     </footer>
 </template>

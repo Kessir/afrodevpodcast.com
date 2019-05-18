@@ -9,12 +9,12 @@
           A podcast where African software developers share their stories. Hosted by
           <a
             href="https://kessir.com"
-          >Kessir</a>.
+          >Kessir Adjaho</a>.
         </p>
 
-        <div class="mt-6 text-gray-400">
+        <div class="mt-3 text-gray-400">
           <ul class="flex sm:justify-start justify-center justify-between flex-wrap">
-            <li class="mt-2 sm:mr-2" v-for="app in podcastApps" :key="app.name">
+            <li class="mt-3 sm:mr-2" v-for="app in podcastApps" :key="app.name">
               <a
                 class="px-2 py-1 border border-gray-500 rounded-sm hover:text-gray-600 hover:border-gray-600"
                 target="_blank"
@@ -26,8 +26,9 @@
       </header>
       <section class="text-gray-400">
         <div class="mt-10">
-          <h2 class="mb-1 text-2xl">Latest Episode</h2>
-          <h2 class="mb-2">{{latestEpisode.title}}</h2>
+          <g-link class="hover:text-gray-600 " :to="latestEpisode.path">
+            <h2 class="mb-2 text-xl">{{latestEpisode.title}}</h2>
+          </g-link>
           <iframe
             :src="latestEpisode.audioUrl"
             height="102px"
@@ -39,13 +40,12 @@
 
         <div class="mt-10">
           <ul>
-            <li class="my-1 py-1" v-for="episode in $page.episodes.edges" :key="episode.id">
+            <li class="my-1 py-1" v-for="episode in remainingEpisodes" :key="episode.id">
               <g-link class="hover:text-gray-600" :to="episode.node.path">{{episode.node.title}}</g-link>
             </li>
           </ul>
         </div>
       </section>
-      
     </div>
   </Layout>
 </template>
@@ -99,6 +99,9 @@ export default {
   computed: {
     latestEpisode() {
       return this.$page.episodes.edges[0].node;
+    },
+    remainingEpisodes(){
+      return this.$page.episodes.edges.slice(1);
     }
   }
 };

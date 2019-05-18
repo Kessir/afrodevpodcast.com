@@ -1,7 +1,8 @@
 ---
-title: '#5: Tolulope Komolafe, Senior Consultant at Andela'
-audioUrl: https://anchor.fm/africandev/embed/episodes/5-Tolulope-Komolafe--Software-Engineer-at-Everplans--New-York-e3v4mf
+title: 'Episode 5: Tolulope Komolafe, Software Engineer at Everplans, New York'
+audioUrl: "https://anchor.fm/africandev/embed/episodes/5-Tolulope-Komolafe--Software-Engineer-at-Everplans--New-York-e3v4mf"
 date: 2019-05-08
+excerpt: "Tolulope Komolafe is a Nigerian software engineer currently working with Everplans in New York. Before Everplans, she was a fellow at Andela"
 ---
 
 Tolulope Komolafe ([@betkom](https://twitter.com/betkom/)) is a Nigerian software engineer currently working with Everplans in New York.  Before Everplans, she was a fellow at Andela.

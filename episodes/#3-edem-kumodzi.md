@@ -1,7 +1,8 @@
 ---
-title: '#3: Edem Kumodzi, Senior Consultant at Andela'
+title: 'Episode 3: Edem Kumodzi, Senior Consultant at Andela, Accra'
 audioUrl: https://anchor.fm/africandev/embed/episodes/3-Edem-Kumodzi--Senior-Consultant-at-Andela-e398gq
 date: 2019-02-22
+excerpt: "Edem Kumodzi is a Ghanaian senior software engineer currently working at Andela as a senior consultant. Edem is also very involved in the Ghanaian tech ecosystem. In this episode, we talk about his trajectory, including his experience at Ringier Ghana, ThoughtWorks and now Andela. Edem also tells us why after 3 years working in Ecuador, he decided to come back to Ghana"
 ---
 
 @edemkumodzi is a Ghanaian senior software engineer currently working at Andela as a senior consultant. Edem is also very involved in the Ghanaian tech ecosystem.
