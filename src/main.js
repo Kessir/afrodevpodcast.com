@@ -3,11 +3,13 @@
 
 import DefaultLayout from '~/layouts/Default.vue'
 import EpisodeLayout from '~/layouts/EpisodeLayout.vue'
+import Footer from '~/components/Footer.vue'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.component('EpisodeLayout', EpisodeLayout)
+  Vue.component('Footer', Footer)
 
   // Add a meta tag
   head.meta.push({
@@ -15,8 +17,5 @@ export default function (Vue, { router, head, isClient }) {
     name: 'keywords',
     content: 'African,Podcast,Kessir,Adjaho,Software,Developer'
   })
-  
-  // Bugfix
-  const desc = head.meta.find(meta=> meta.name === 'description');
-  desc.content = 'A podcast where African software developers share their stories. Hosted by Kessir Adjaho.'
+
 }

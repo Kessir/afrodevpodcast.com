@@ -3,6 +3,7 @@
     <div class="container m-auto px-4 sm:px-6 py-4 sm:py-8 flex-grow max-w-2xl">
       <slot/>
     </div>
+    <Footer/>
   </div>
 </template>
 
@@ -13,4 +14,5 @@ query {
   }
 }
 </static-query>
+
 <style src="../main.css"/>

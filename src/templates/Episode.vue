@@ -5,7 +5,7 @@
       </g-link>
     <h2 class="text-3xl  my-4">{{$page.episode.title}}</h2>
 
-    <!-- <iframe :src="$page.episode.audio" height="100px" width="100%" frameborder="0" scrolling="no"></iframe> -->
+    <iframe :src="$page.episode.audioUrl" height="100px" width="100%" frameborder="0" scrolling="no"></iframe>
     <div class="mt-4" v-html="$page.episode.content"/>
   </EpisodeLayout>
 </template>
@@ -14,6 +14,7 @@ query Episode($path: String!){
     episode: episode (path: $path){
         title
         content
+        audioUrl
     }
 }
 </page-query>
@@ -22,7 +23,10 @@ query Episode($path: String!){
 export default {
   metaInfo() {
     return {
-      title: this.$page.episode.title
+      title: this.$page.episode.title,
+      meta: [
+          { name: "author", content: "Kessir Adjaho" },
+      ]
     };
   }
 };

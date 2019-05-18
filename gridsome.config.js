@@ -14,6 +14,7 @@ if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
   siteName: 'AfroDevPodcast',
+  siteDescription: 'African Developers Podcast, a podcast where African software developers share their stories. Hosted by Kessir Adjaho',
   siteUrl: "https://afrodevpodcast.com",
   transformers: {
     remark: {
@@ -25,12 +26,6 @@ module.exports = {
   },
   plugins: [
     {
-      use: '@gridsome/plugin-google-analytics',
-      options: {
-        id: 'UA-32598219-8'
-      }
-    },
-    {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'episodes/**/*.md',
@@ -38,6 +33,16 @@ module.exports = {
         remark: {},
         route: '/episodes/:slug'
       }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-32598219-8'
+      }
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options:{}
     }
   ],
   css: {
