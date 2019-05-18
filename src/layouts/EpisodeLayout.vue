@@ -14,4 +14,14 @@ query {
   }
 }
 </static-query>
-<style src="../main.css"/>
+<style >
+@import url("https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css");
+@import url("../main.css");
+
+.markdown-body {
+  color: inherit;
+}
+.markdown-body > ul {
+  list-style: disc
+}
+</style>

@@ -27,8 +27,8 @@
           href
         >Facebook</a>
       </div>
-    </div> -->
-    <div class="mt-4" v-html="$page.episode.content"/>
+    </div>-->
+    <div class="mt-4 markdown-body text-gray-500 " v-html="$page.episode.content"/>
   </EpisodeLayout>
 </template>
 <page-query>
@@ -47,16 +47,15 @@ export default {
     return {
       title: this.$page.episode.title,
       meta: [
-          { name: "author", content: "Kessir Adjaho" },
-          { name: "description", content: this.$page.episode.excerpt },
-          { name: "twitter:card", content: "summary_large_image" },
-          { name: "twitter:title", content: this.$page.episode.title },
-          { name: "twitter:description", content: this.$page.episode.excerpt },
-          { name: "twitter:creator", content: "@afrodevpodcast" },
-          { name: "twitter:site", content: "@afrodevpodcast" },
+        { name: "author", content: "Kessir Adjaho" },
+        { name: "description", content: this.$page.episode.excerpt },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: this.$page.episode.title },
+        { name: "twitter:description", content: this.$page.episode.excerpt },
+        { name: "twitter:creator", content: "@afrodevpodcast" },
+        { name: "twitter:site", content: "@afrodevpodcast" }
       ]
     };
   }
 };
 </script>
-
