@@ -18,6 +18,7 @@
               <a
                 class="px-2 py-1 border border-gray-500 rounded-sm hover:text-gray-600 hover:border-gray-600"
                 target="_blank"
+                rel="noreferrer"
                 :href="app.url"
               >{{app.name}}</a>
             </li>
@@ -35,6 +36,7 @@
             width="100%"
             frameborder="0"
             scrolling="no"
+            title="Audio Player"
           ></iframe>
         </div>
 

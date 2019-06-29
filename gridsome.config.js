@@ -13,7 +13,7 @@ const postcssPlugins = [
 if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
-  siteName: 'AfroDevPodcast',
+  siteName: 'African Developers Podcast',
   siteDescription: 'African Developers Podcast, a podcast where African software developers share their stories. Hosted by Kessir Adjaho',
   siteUrl: "https://afrodevpodcast.com",
   transformers: {

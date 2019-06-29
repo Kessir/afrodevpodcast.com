@@ -15,7 +15,7 @@ export default function (Vue, { router, head, isClient }) {
   head.meta.push({
     key: 'keywords',
     name: 'keywords',
-    content: 'African,Podcast,Kessir,Adjaho,Software,Developer'
+    content: 'African Developers Podcast,Podcast,Kessir Adjaho,Software Developer'
   })
 
 }
