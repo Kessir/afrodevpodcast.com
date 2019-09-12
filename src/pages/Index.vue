@@ -2,12 +2,11 @@
   <Layout>
     <div class>
       <header>
-        <img class="h-40 sm:m-0 m-auto" src="../../static/logo.png" alt="Logo">
-
+        <Logo />
         <h1 class="sm:text-5xl text-3xl mt-1 sm:text-left text-center">African Developers Podcast</h1>
         <p class="text-base text-gray-400 sm:text-left text-center">
           A podcast where African software developers share their stories. Hosted by
-          <a
+          <a class="underline"
             href="https://kessir.com"
           >Kessir Adjaho</a>.
         </p>
@@ -25,10 +24,11 @@
           </ul>
         </div>
       </header>
-      <section class="text-gray-400">
+      <section class="text-gray-300">
         <div class="mt-10">
-          <g-link class="hover:text-gray-600 " :to="latestEpisode.path">
-            <h2 class="mb-2 text-xl">{{latestEpisode.title}}</h2>
+          <g-link class="hover:text-gray-600" :to="latestEpisode.path">
+            <h2 class="text-lg text-gray-400">Latest episode</h2>
+            <h2 class="mb-2 text-2xl">#{{latestEpisode.episode}} - {{latestEpisode.title}}</h2>
           </g-link>
           <iframe
             :src="latestEpisode.audioUrl"
@@ -42,8 +42,8 @@
 
         <div class="mt-10">
           <ul>
-            <li class="my-1 py-1" v-for="episode in remainingEpisodes" :key="episode.id">
-              <g-link class="hover:text-gray-600" :to="episode.node.path">{{episode.node.title}}</g-link>
+            <li class="mt-2 py-1" v-for="episode in remainingEpisodes" :key="episode.id">
+              <EpisodeCard :episode="episode.node" />
             </li>
           </ul>
         </div>
@@ -58,6 +58,9 @@ query Episodes {
           node{
             id
             title
+            image (width: 250)
+            excerpt
+            episode
             path
             audioUrl
           }
@@ -66,9 +69,14 @@ query Episodes {
 }
 </page-query>
 <script>
+import EpisodeCard from "~/components/EpisodeCard.vue";
+import Logo from "~/components/Logo.vue";
 export default {
   metaInfo: {
     title: "Home"
+  },
+  components: {
+    EpisodeCard, Logo
   },
   data() {
     return {
@@ -98,12 +106,18 @@ export default {
       ]
     };
   },
+  methods: {
+    imageUrl(base) {
+      if (!base) return "/assets/static/static/logo.png";
+      return "/assets/static/static/images/" + base;
+    }
+  },
   computed: {
     latestEpisode() {
       return this.$page.episodes.edges[0].node;
     },
-    remainingEpisodes(){
-      return this.$page.episodes.edges.slice(1);
+    remainingEpisodes() {
+      return this.$page.episodes.edges;
     }
   }
 };

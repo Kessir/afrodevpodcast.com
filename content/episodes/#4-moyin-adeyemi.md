@@ -1,5 +1,8 @@
 ---
-title: "Episode 4: Moyinoluwa Adeyemi, Android Developer at Zola Electric, Lagos"
+title: "Moyinoluwa Adeyemi, Android Developer at Zola Electric, Lagos"
+image: '../images/moyin.jpeg'
+episode: 4
+slug: 'episode-4-moyinoluwa-adeyemi-android-developer-at-zola-electric-lagos'
 audioUrl: "https://anchor.fm/africandev/embed/episodes/4-Moyinoluwa-Adeyemi--Android-Developer-at-Zola-Electric-e3e51h"
 date: 2019-03-11
 excerpt: "Moyin is a Nigerian Android developer currently working with Zola Electric (formerly Offgrid electric). She is also a GDG Lagos co-organizer.

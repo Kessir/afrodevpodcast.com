@@ -1,9 +1,10 @@
 <template>
   <EpisodeLayout>
-    <g-link class="sm:m-0 m-auto" to="/">
-      <img class="h-20 sm:m-0 m-auto" src="../../static/logo.png" alt="Logo">
-    </g-link>
-    <h2 class="text-3xl my-4 sm:text-left text-center">{{$page.episode.title}}</h2>
+    <Logo />
+    <g-link class="block mt-1 hover:text-gray-500" to="/">&#8592; Home</g-link>
+    <div
+      class="text-2xl md:text-3xl mb-4 mt-4 sm:text-left text-center"
+    >{{compoundTitle}}</div>
 
     <iframe
       :src="$page.episode.audioUrl"
@@ -13,22 +14,26 @@
       scrolling="no"
     ></iframe>
 
-    <div class="mt-4">
-      <h3>Share</h3>
-      <div class="flex mt-2">
-        <a
-          class="px-2 py-1 border border-gray-500 rounded-sm hover:text-gray-600 hover:border-gray-600 mr-4"
-          target="_blank"
-          :href="getTwitterUrl()"
-        >Twitter</a>
-        <a
-          class="px-2 py-1 border border-gray-500 rounded-sm hover:text-gray-600 hover:border-gray-600"
-          target="_blank"
-          :href="getFacebookUrl()"
-        >Facebook</a>
-      </div>
+    <div class="flex mt-4 justify-center sm:justify-start">
+      <a
+        class="px-2 py-1 border border-gray-500 rounded-sm hover:text-gray-600 hover:border-gray-600 mr-4"
+        target="_blank"
+        :href="getTwitterUrl()"
+      >Share on Twitter</a>
+      <a
+        class="px-2 py-1 border border-gray-500 rounded-sm hover:text-gray-600 hover:border-gray-600"
+        target="_blank"
+        :href="getFacebookUrl()"
+      >Share on Facebook</a>
     </div>
-    <div class="mt-4 markdown-body text-gray-500" v-html="$page.episode.content"/>
+    <div class="mt-8" v-if="$page.episode.image">
+      <g-image
+        :src="$page.episode.image.src"
+        class="h-48 w-48 sm:m-0 m-auto rounded"
+        alt="Guest's picture"
+      />
+    </div>
+    <div class="mt-4 markdown-body text-gray-500" v-html="$page.episode.content" />
   </EpisodeLayout>
 </template>
 <page-query>
@@ -36,6 +41,8 @@ query Episode($path: String!){
     episode: episode (path: $path){
         title
         content
+        episode
+        image (width: 400)
         audioUrl
         excerpt
         path
@@ -44,13 +51,13 @@ query Episode($path: String!){
 </page-query>
 
 <script>
+import Logo from "~/components/Logo.vue";
 import { getTwitterIntent, getFacebookIntent } from "~/lib/helpers";
-const logoUrl =
-  "https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded_nologo400/1292613/1292613-1548407213420-77ff16fcab8ac.jpg";
+
 export default {
   metaInfo() {
     return {
-      title: this.$page.episode.title,
+      title: this.compoundTitle,
       meta: [
         { name: "author", content: "Kessir Adjaho" },
         {
@@ -59,17 +66,30 @@ export default {
           content: this.$page.episode.excerpt
         },
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: this.$page.episode.title },
+        { name: "twitter:title", content: this.compoundTitle },
         { name: "twitter:description", content: this.$page.episode.excerpt },
         { name: "twitter:creator", content: "@afrodevpodcast" },
         { name: "twitter:site", content: "@afrodevpodcast" },
         {
           name: "twitter:image",
-          content: logoUrl
+          content: this.imageUrl
         },
-        { property: "og:image", content: logoUrl }
+        { property: "og:image", content: this.imageUrl },
+        { property: "og:url", content: 'https://afrodevpodcast.com' }
       ]
     };
+  },
+  components: {
+    Logo
+  },
+  computed:{
+    compoundTitle(){
+      return `Episode ${this.$page.episode.episode}: ${ this.$page.episode.title}`;
+    },
+    imageUrl(){
+      if(this.$page.episode.image) return this.$page.episode.image.src;
+      return '/assets/static/content/images/logo.jpg?width=250'
+    }
   },
   methods: {
     getTwitterUrl() {

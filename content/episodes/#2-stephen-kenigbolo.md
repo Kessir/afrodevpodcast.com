@@ -1,5 +1,8 @@
 ---
-title: 'Episode 2: Stephen Kenigbolo, Lead front-end developer at BCaster, Helsinki'
+title: 'Stephen Kenigbolo, Lead front-end developer at BCaster, Helsinki'
+image: '../images/stephen.jpeg'
+episode: 2
+slug: 'episode-2-stephen-kenigbolo-lead-front-end-developer-at-b-caster-helsinki'
 audioUrl: https://anchor.fm/africandev/embed/episodes/2-Stephen-Kenigbolo--Lead-front-end-developer-at-BCaster-in-Helsinki-e31c1j
 date: 2019-02-06
 excerpt: "Stephen Meya Kenigbolo is the Lead front-end developer at BCaster in Helsinki, Finland. In this episode, Stephen tells us about quitting med school med. school to start a career in software development."
