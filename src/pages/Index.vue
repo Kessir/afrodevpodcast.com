@@ -28,7 +28,7 @@
         <div class="mt-10">
           <g-link class="hover:text-gray-600" :to="latestEpisode.path">
             <h2 class="text-lg text-gray-400">Latest episode</h2>
-            <h2 class="mb-2 text-2xl">#{{latestEpisode.episode}} - {{latestEpisode.title}}</h2>
+            <h2 class="mb-2 text-2xl">{{latestEpisode.title}}</h2>
           </g-link>
           <iframe
             :src="latestEpisode.audioUrl"

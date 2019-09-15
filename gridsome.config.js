@@ -16,6 +16,7 @@ module.exports = {
   siteName: 'African Developers Podcast',
   siteDescription: 'African Developers Podcast, a podcast where African software developers share their stories. Hosted by Kessir Adjaho',
   siteUrl: "https://afrodevpodcast.com",
+  titleTemplate: `%s | African Developers Podcast`,
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
