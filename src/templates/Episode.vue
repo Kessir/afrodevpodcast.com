@@ -94,13 +94,13 @@ export default {
   methods: {
     getTwitterUrl() {
       return getTwitterIntent(
-        this.$page.episode.title,
+        this.compoundTitle,
         this.$page.episode.path
       );
     },
     getFacebookUrl() {
       return getFacebookIntent(
-        this.$page.episode.title,
+        this.compoundTitle,
         this.$page.episode.path
       );
     }

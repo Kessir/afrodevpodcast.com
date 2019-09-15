@@ -73,7 +73,14 @@ import EpisodeCard from "~/components/EpisodeCard.vue";
 import Logo from "~/components/Logo.vue";
 export default {
   metaInfo: {
-    title: "Home"
+    title: "Home",
+    meta:[
+      { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: 'African Developers Podcast' },
+        { name: "twitter:description", content: 'A podcast where African software developers share their stories. Hosted by Kessir Adjaho.' },
+        { name: "twitter:creator", content: "@afrodevpodcast" },
+        { name: "twitter:site", content: "@afrodevpodcast" },
+    ]
   },
   components: {
     EpisodeCard, Logo
