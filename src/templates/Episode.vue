@@ -87,8 +87,8 @@ export default {
       return `Episode ${this.$page.episode.episode}: ${ this.$page.episode.title}`;
     },
     imageUrl(){
-      if(this.$page.episode.image) return this.$page.episode.image.src;
-      return '/assets/static/content/images/logo.jpg?width=250'
+      if(this.$page.episode.image) return 'https://afrodevpodcast.com' + this.$page.episode.image.src;
+      return 'https://afrodevpodcast.com/assets/static/content/images/logo.jpg?width=250'
     }
   },
   methods: {
